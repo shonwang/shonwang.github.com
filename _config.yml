@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Notepad
-tagline: 
+tagline: ...
 author : Shon
   name : Shon Wang
   email : blah@email.test
