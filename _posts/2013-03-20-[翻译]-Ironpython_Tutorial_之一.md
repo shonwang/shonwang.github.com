@@ -1,3 +1,10 @@
+---
+layout: post 
+category: lessons
+tags: [IronPython]
+---
+{% include JB/setup %}
+
 [翻译] python Tutorial 之一
 
 **声明**：本文做为IronPython-2.0 B3的Tutorial 中文译文，内容全部来自其英文原文，
