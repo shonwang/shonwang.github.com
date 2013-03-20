@@ -7,38 +7,19 @@ tags: [IronPython]
 
 [翻译] python Tutorial 之一
 
-**声明**：本文做为IronPython-2.0 B3的Tutorial 中文译文，内容全部来自其英文原文，
-
-其中本人认为存在疑问的或翻译不当之处会用原文中的内容加以标记，且本文内容完全用于研
-
-究和学习IronPython 之用，限于本人英文翻译功底有限，如有错误，欢迎大家批评指正。
+**声明**：本文做为IronPython-2.0 B3的Tutorial 中文译文，内容全部来自其英文原文，其中本人认为存在疑问的或翻译不当之处会用原文中的内容加以标记，且本文内容完全用于研究和学习IronPython 之用，限于本人英文翻译功底有限，如有错误，欢迎大家批评指正。
 
 原文链接如下：[http://www.cnblogs.com/daizhj/articles/1245093.html](http://www.cnblogs.com/daizhj/articles/1245093.html)
 
 **Introduction**
 
-IronPython 作为 Python 语言在.net平台上的实现(www.python.org)，它是一种动态
-
-语言且支持许多编程范例[paradigms] ，诸如面向对象，也允许您使用.net代码进行编译。
-
-本tutorial的目标就是使您快速熟悉IronPython 控制台（console），并向您展示如何有
-
-效的使用扩展（extensive）.net库。这个 tutorial同时还会展示如何从一些特殊领域入手，
-
-这些领域诸如COM的内部操作，用C#扩展 IronPython ，以及嵌入式的IronPython 等。当
-
-然本tutorial决不是针对Python语言自身进行介绍，如果您想查阅这方面的资料，我们推荐您
-
-去www.python.org  或 看一下由Mark Lutz 与 David Ascher 合著的“Learning Python”
-这本书。 
+IronPython 作为 Python 语言在.net平台上的实现(www.python.org)，它是一种动态语言且支持许多编程范例[paradigms] ，诸如面向对象，也允许您使用.net代码进行编译。本tutorial的目标就是使您快速熟悉IronPython 控制台（console），并向您展示如何有效的使用扩展（extensive）.net库。这个 tutorial同时还会展示如何从一些特殊领域入手，这些领域诸如COM的内部操作，用C#扩展 IronPython ，以及嵌入式的IronPython 等。当然本tutorial决不是针对Python语言自身进行介绍，如果您想查阅这方面的资料，我们推荐您去www.python.org  或 看一下由Mark Lutz 与 David Ascher 合著的“Learning Python”这本书。 
 
 本tutorial所需要的运行环境如下：
 
 •Microsoft .NET Framework Version 2.0 Redistributable Package (x86) •Required to run IronPython. 
 
-•Download from here.
-
-•译者注：本人机器上是.net3.5，也可运行部分的示例，所以大家不必非要下载2.0
+译者注：本人机器上是.net3.5，也可运行部分的示例，所以大家不必非要下载2.0
 
 •.NET Framework 2.0 Software Development Kit (SDK) (x86) 
 
@@ -58,16 +39,11 @@ IronPython 作为 Python 语言在.net平台上的实现(www.python.org)，它�
 
 直接进入到下面的正文了，而如果您安装的是vs2005，那么请您检查相应的条件是否已不足。
   
-本tutorial假设IronPython的发布包已被解压缩至C:\IronPython. 请注意您个人的安装可能会存在
+本tutorial假设IronPython的发布包已被解压缩至C:\IronPython. 请注意您个人的安装可能会存在一定的差异。
 
-一定的差异。
+本tutorial假设您将会使用IronPython 控制台功能。将tutorial指导您从tutorial目录启动控制台程序时，您应该定位到tutorial目录下(>cd c:\ironpython\tutorial) ，并运行控制台程序(>..\ipy.exe)。
 
-本tutorial假设您将会使用IronPython 控制台功能。将tutorial指导您从tutorial目录启动控制台程
-
-序时，您应该定位到tutorial目录下(>cd c:\ironpython\tutorial) ，并运行控制台程序(>..\ipy.exe)。
-
-译者注：ipy.exe可以下面链接中直接下载，我这样做主要是觉得园子里有些朋友可以只是想了解并试
-用一下，并不想下载那个IronPython的源码包或相应的sdk等资源。
+译者注：ipy.exe可以下面链接中直接下载，我这样做主要是觉得园子里有些朋友可以只是想了解并试用一下，并不想下载那个IronPython的源码包或相应的sdk等资源。
 
 好了，让我们开始正文吧。
 
@@ -77,10 +53,7 @@ IronPython 作为 Python 语言在.net平台上的实现(www.python.org)，它�
 
 本章节阅读大概需要30分钟 
 
-The objective of this tutorial is to launch the IronPython interpreter, explore the environment 
-
-of the interactive console and use IronPython to interact with .NET libraries.
-
+The objective of this tutorial is to launch the IronPython interpreter, explore the environment of the interactive console and use IronPython to interact with .NET libraries.
 The exercises in this tutorial are:
 
 •The IronPython interactive console
@@ -92,18 +65,12 @@ The exercises in this tutorial are:
 
 **练习 1: IronPython 交互控件台**
 
-In this exercise, you will start the IronPython interactive interpreter and perform simple tasks 
-
-to become acquainted with the IronPython environment. If you are familiar with using the Python 
-
-interactive console, the import statement and exploring the Python interactive environment using 
-
-dir() function and __doc__ attribute, you can skip this exercise.
+In this exercise, you will start the IronPython interactive interpreter and perform simple tasks to become acquainted with the IronPython environment. If you are familiar with using the Python 
+interactive console, the import statement and exploring the Python interactive environment using dir() function and __doc__ attribute, you can skip this exercise.
 
 **任务 1: IronPython console**
 
-1.从本Tutorial的路径下启动IronPython console（c:"ironpython"ipy.exe）。它将如在DOS窗口
- 下出现如下提示
+1.从本Tutorial的路径下启动IronPython console（c:"ironpython"ipy.exe）。它将如在DOS窗口下出现如下提示
 
 	IronPython 1.0 on .NET 2.0.50727.42
 	 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -136,19 +103,13 @@ dir() function and __doc__ attribute, you can skip this exercise.
 3.IronPython 控制台支持多行声明（multi-line statements），这经常要进行函数定义:
 ...
 
-Unlike C# or Java, where blocks of code are grouped by curly brackets "{...}", blocks 
+Unlike C# or Java, where blocks of code are grouped by curly brackets "{...}", blocks of code in Python are grouped based on their level of indentation.  Every new block of code must be indented one more level than the previous block of code.  Blocks of code are used for function and class definitions as well as 'if' statements and loops.
 
-of code in Python are grouped based on their level of indentation.  Every new block of code 
+例如：定义“add”方法（注：你需要在return 之前敲入空格符）:
 
-must be indented one more level than the previous block of code.  Blocks of code are used 
+	return a + b
 
-for function and class definitions as well as 'if' statements and loops.
-
- 例如：定义“add”方法（注：你需要在return 之前敲入空格符）:
-
-     return a + b
-
- 要完成函数定义，按下Enter键。
+要完成函数定义，按下Enter键。
 
 	add(3, 2)
 	add("Iron", "Python")
@@ -164,7 +125,6 @@ for function and class definitions as well as 'if' statements and loops.
 	'IronPython'
 	>>> 
 
- 
 4.要退出控制台程序，按下Ctrl+Z 并回车即可(alternatively, press F6 followed by Enter).
 
 	^Z
@@ -186,10 +146,7 @@ for function and class definitions as well as 'if' statements and loops.
 
 	import sys
 
-4.Python 引入声明与 C# 的 "using" 或Visual Basic的"Imports"声明相似。
-The important difference is that the C# and VB statements bring the names from the 
- imported namespace into the global namespace to be accessed directly. Python’s import 
- doesn’t do that. 
+4.Python 引入声明与 C# 的 "using" 或Visual Basic的"Imports"声明相似。The important difference is that the C# and VB statements bring the names from the imported namespace into the global namespace to be accessed directly. Python’s import doesn’t do that. 
 
 要访问引入模块的名称和属性, 使用module名称的前缀:
 
@@ -206,8 +163,7 @@ The important difference is that the C# and VB statements bring the names from t
 
 6.使用dir() 方法来显示"sys" 模块的内容:
 
-
-dir(sys)
+	dir(sys)
 
 7.打印出 "sys" 模块属性的一些值：
 
@@ -288,7 +244,6 @@ IronPython 的能力在于它可以无缝访问.NET 类库。这个练习将会�
 
 4.使用“from ... import ..." 引入相应类库声明，并使用dir()显示全局名空间内容。
 
-
 	from System.Math import *
 	dir()
 
@@ -331,8 +286,7 @@ IronPython 支持C# 风格语法来访问hash表元素. 相同的语法可用于
 	>>> h["a"]
 	'IronPython'
 
-4.使用声明"for ... in ..." 列举hash表的内容. hash 表元素作为"DictionaryEntry" 类实例. 
-打印"Key"和"Value"属性:
+4.使用声明"for ... in ..." 列举hash表的内容. hash 表元素作为"DictionaryEntry" 类实例. 打印"Key"和"Value"属性:
 
 	for e in h: print e.Key, ":", e.Value
 
@@ -343,9 +297,7 @@ IronPython 支持C# 风格语法来访问hash表元素. 相同的语法可用于
 	a : IronPython
 	b : Tutorial
 
-5.你可以向python内置列表传递参数来初始化集合类. 您可以通过[1,2,3]来创建指定元素来创
-建Python 列表[1,2,3].   
-You create tuples by specifying elements in the parentheses: (1,2,3).
+5.你可以向python内置列表传递参数来初始化集合类. 您可以通过[1,2,3]来创建指定元素来创建Python 列表[1,2,3]. You create tuples by specifying elements in the parentheses: (1,2,3).
 
 	l = ArrayList([1,2,3])
 	for i in l: print i
@@ -410,8 +362,7 @@ generic_type[type_argument, ...] （泛型类型[类型参数]）.  创建泛型
 
 6.按下Ctrl+Z 或 F6 回车，退出IronPython 控制台。
 
-好了，今天就先翻译到这里了，看了看原文，发现刚翻译了1/4, 看来要再用2-3个篇幅来完成全篇翻译。我
-想等全部翻译结束后，将翻译的各篇文章拼揍起来。
+好了，今天就先翻译到这里了，看了看原文，发现刚翻译了1/4, 看来要再用2-3个篇幅来完成全篇翻译。我想等全部翻译结束后，将翻译的各篇文章拼揍起来。
 
 控制台程序下载链接：[http://www.cnblogs.com/files/daizhj/ipy.zip](http://www.cnblogs.com/files/daizhj/ipy.zip)
 
