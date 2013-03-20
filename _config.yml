@@ -9,14 +9,14 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title:Notepad
-tagline:...
-author:Shon
-name:Shon Wang
-email:blah@email.test
-github:ShonWang
-twitter:None
-feedburner:None
+title: Notepad
+tagline: 
+author: Shon
+name: Shon Wang
+email: blah@email.test
+github: ShonWang
+twitter: 
+feedburner: 
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
