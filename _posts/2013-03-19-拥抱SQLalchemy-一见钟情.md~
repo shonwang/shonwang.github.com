@@ -551,7 +551,7 @@ join()的其他写法
 
 	session.query(Foo).join(Foo.bars, Bar.bats, (Bat, ’widgets’))
 
-这是多个JOIN的表示方法，SQL类似这样：`foo JOIN bars ON <onclause> JOIN bats ON<onclause> JOIN widgets ON <onclause>`
+这是多个JOIN的表示方法，SQL类似这样：foo JOIN bars ON <onclause> JOIN bats ON<onclause> JOIN widgets ON <onclause>
 
 	>>> from sqlalchemy.orm import aliased
 	>>> adalias1 = aliased(Address)
