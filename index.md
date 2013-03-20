@@ -4,6 +4,8 @@ title: Notepad
 ---
 {% include JB/setup %}
 
+![](/_images/eye.jpg)
+
 ### Talking the talk is not as good as walking the walk. 
 
 <ul class="posts">
