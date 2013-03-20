@@ -4,7 +4,7 @@ title: Notepad
 ---
 {% include JB/setup %}
 
-![]({{BASE_PATH}}/_images/eye.jpg)
+![](https://github.com/shonwang/shonwang.github.com/blob/master/_images/eye.jpg)
 
 ### Talking the talk is not as good as walking the walk. 
 
