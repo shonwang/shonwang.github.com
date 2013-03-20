@@ -4,7 +4,7 @@ title: Notepad
 ---
 {% include JB/setup %}
 
-![](https://github.com/shonwang/shonwang.github.com/blob/master/_images/eye.jpg)
+![image]()
 
 ### Talking the talk is not as good as walking the walk. 
 
