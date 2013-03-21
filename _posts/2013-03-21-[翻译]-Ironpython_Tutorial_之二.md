@@ -61,9 +61,8 @@ The output in the console window will be:
 
 	import xmlutil
 	for e in xmlutil.Walk(d): print e.Name, e.Value
-	#document None #comment ************************************************************************* * * Copyright (c) Microsoft Corporation.  * * This source code is subject to terms and conditions of the Microsoft Public License. A  * copy of the license can be found in the License.html file at the root of this distribution. If  * you cannot locate the Microsoft Public License, please send an email to  * ironpy@microsoft.com. By using this source code in any fashion, you are agreeing to be bound  * by the terms of the Microsoft Public License. * * You must not remove this notice, or any other, from this software. * * * ***************************************************************************  Puzzle None SavedGames None Game None caption Seattle (default game) type a y 714 x 327 level 11 dimension 3 Game None caption New York type r y 1538 x 1205 level 12 dimension 3 Game None caption World type h y 0 x 0 level 2 dimension 4 Game None caption North America type a x 2 y 5 level 4 dimension 3 TopLeftPreviewTile None x -3 y -3 dimension 3 level 5 Cache None allow true
 
-遍历方法是一个生成器[generator] (Python 方法包含 "yield" 声明). 在遍历方法执行时, 它逐个返回(yields) XML 结点数据给调用者[caller]. 遍历代码如下:
+遍历方法是一个生成器`[generator]` (Python 方法包含 "yield" 声明). 在遍历方法执行时, 它逐个返回(yields) XML 结点数据给调用者`[caller]`. 遍历代码如下:
 
 	def Walk(xml):
 	    yield xml
@@ -201,4 +200,4 @@ Python 类库。
 
 在下一篇中，将会介绍IronPython 高级篇（Advanced ）
 
-[原文](http://www.cnblogs.com/daizhj/archive/2008/07/22/1247557.html)
+原文 [http://www.cnblogs.com/daizhj/archive/2008/07/22/1247557.html](http://www.cnblogs.com/daizhj/archive/2008/07/22/1247557.html)
