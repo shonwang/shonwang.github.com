@@ -4,7 +4,7 @@ title: Notepad
 ---
 {% include JB/setup %}
 
-![](/images/eye.jpg)
+![](/images/eye.png)
 
 ### Talking the talk is not as good as walking the walk. 
 
