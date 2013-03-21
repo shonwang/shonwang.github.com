@@ -3,14 +3,12 @@ layout: page
 title: Notepad
 ---
 {% include JB/setup %}
-
-### Talking the talk is not as good as walking the walk. 
-
+### Talking the talk is not as good as walking the walk.
+--- 
 ![](/images/eye.png)
 
 ##INDEX
 ---
-
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
@@ -19,7 +17,6 @@ title: Notepad
 
 ## Link
 ---
-
 - [Fork me on github](https://github.com/shonwang/shonwang.github.com)
 
 - [Ji Wei's github](https://github.com/chengzi)
@@ -28,7 +25,6 @@ title: Notepad
 
 ### To-Do
 ---
-
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
