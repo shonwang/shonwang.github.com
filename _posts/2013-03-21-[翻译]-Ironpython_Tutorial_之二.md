@@ -5,7 +5,6 @@ tags: [IronPython]
 ---
 {% include JB/setup %}
 
-[翻译] python Tutorial 之二
 在上一篇中，简单介绍了IronPython的相关配置和控制台使用方面的内容，今天继续翻译接下来的内容。
 
 **Exercise 3: 加载 .NET 库**
