@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Notepad
-tagline: "Talking the talk is not as good as walking the walk"
 ---
 {% include JB/setup %}
-
 ###INDEX
 
 ![](/images/eye.png)
+####Talking the talk is not as good as walking the walk
 
 <ul class="posts">
   {% for post in site.posts %}
