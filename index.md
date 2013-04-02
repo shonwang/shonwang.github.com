@@ -20,6 +20,7 @@ title: Notepad
 - [Fork me on github](https://github.com/shonwang/shonwang.github.com)
 - [Ji Wei's github](https://github.com/chengzi)
 - [Ya's github](https://github.com/dracher)
+- [Python自动单元测试框架](http://www.ibm.com/developerworks/cn/linux/l-pyunit/index.html)
 
 ---
 ### To-Do
