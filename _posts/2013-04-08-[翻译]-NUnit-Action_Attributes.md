@@ -23,6 +23,7 @@ tags : [NUnit]
 ## **解决问题 （Resolving the Problem）**##
 
 **Action Attributes** 能够帮助我们摆脱困境，思考一下这个例子：
+
   [TestFixture, ResetServiceLocator]
 	public class MyTests
 	{
@@ -96,7 +97,7 @@ Action Attribute 是程序员定义的。它们实现了 像下面这样定义�
 
 ##**示例**##
 
-下所有的示例都采用下面的 Action attribute 示例：
+以下所有的示例都采用下面的 Action attribute 示例：
 
 	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Class |
 	                AttributeTargets.Interface | AttributeTargets.Assembly,
