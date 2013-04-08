@@ -1,9 +1,11 @@
 ---
 layout: post
 category : lessons
-tags : [SQLalchemy]
+tags : [NUnit]
 ---
 {% include JB/setup %}
+
+翻译(http://nunit.org/index.php?p=actionAttributes&r=2.6.2)[http://nunit.org/index.php?p=actionAttributes&r=2.6.2]
 
 #**Action Attributes (NUnit 2.6)**#
 
