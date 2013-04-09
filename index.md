@@ -23,7 +23,7 @@ title: Notepad
 - [Python自动单元测试框架](http://www.ibm.com/developerworks/cn/linux/l-pyunit/index.html)
 
 ---
-### To-Do
+### ABOUT JEKYLL
 
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
