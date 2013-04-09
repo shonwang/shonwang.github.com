@@ -58,3 +58,26 @@ Category attribute 提供了一个可供选择的suites来处理测试组（grou
 	[Test, Critical]
 	public void MyTest()
 	{ /*...*/ }
+
+#**CombinatorialAttribute(NUnit 2.5)**#
+
+NUnit 应该为作为测试参数的单独数据所有的组合生成相应的测试用例。CombinatorialAttribute 就用于在测试中指定这种情况。这是默认的，所以这个 attribute 是可选的。
+
+##**示例**##
+
+下面的测试将会被执行6次，如下：
+
+	MyTest(1, "A")
+	MyTest(1, "B")
+	MyTest(2, "A")
+	MyTest(2, "B")
+	MyTest(3, "A")
+	MyTest(3, "B")
+
+	[Test, Combinatorial]
+	public void MyTest(
+	    [Values(1,2,3)] int x,
+	    [Values("A","B")] string s)
+	{
+	    ...
+	}
