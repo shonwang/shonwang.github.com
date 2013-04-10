@@ -11,7 +11,7 @@ MaxtimeAttribute 用于为测试用在测试方法上指定一个以毫秒为单
 
 **示例**
 
-  [Test, Maxtime(2000)]
+  	[Test, Maxtime(2000)]
 	public void TimedTest()
 	{
 	    ...
