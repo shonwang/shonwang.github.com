@@ -64,7 +64,7 @@ Find 方法使用一个定位器或者一个作为 By 类接口的查询对象�
 
 **通过 ID attribute 查找元素**
 
-*To be contiue...*
+*To be continue...*
 
 
 
