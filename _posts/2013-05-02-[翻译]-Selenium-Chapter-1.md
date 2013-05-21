@@ -20,7 +20,7 @@ tags : [NUnit]
 - 使用高级的 CSS 选择器定位元素
 - 使用 jQuery 选择器
 - 定位表的行和单元格
-- 定位表中的子元素
+- 定位表中的子元素 
 
 ##**介绍**##
 
@@ -63,6 +63,54 @@ Find 方法使用一个定位器或者一个作为 By 类接口的查询对象�
 使用 id， name， 或者 class attributes 定位元素是查找元素的优先方法。下面让我们尝试使用这些方法来定位元素。
 
 **通过 ID attribute 查找元素**
+
+使用 id attribute 是在页面上定位元素的最好办法。W3C 标准建议开发者为元素提供一个 id attribute，以确保每一个元素都是唯一的。拥有一个唯一的 id attribute 将会为定位页面元素提供一套非常清晰和可靠的办法。
+
+在处理 DOM 时，浏览器使用 id 作为优先的方法来识别元素，提供最快的定位器策略。
+
+……
+
+去定位 User Name 和 Password 字段的时候，我们可以像下面这样使用 id attribute:
+
+	WebElement username = driver.findElement(By.id("username"));
+	WebElement password = driver.findElement(By.id("password"));
+
+**通过 Name attribute 查找元素**
+
+用 id attribute 定位元素是最好的定位器策略，但是你可能会因为以下一些原因而发现一些你不能使用 id attribute 的情况：
+
++ 并不是所有的页面元素都有指定的 id attribute
++ 页面的关键元素没有指定 id attribute
++ id attribute 值是动态生成的
+
+我们可以像下面这样使用 name attribute 来定位元素：
+
+	WebElement username = driver.findElement(By.name("username"));
+	WebElement password = driver.findElement(By.name("password"));
+
+不像 id，name attribute 在一个页面中可能不是唯一的。你会发现多个同名的元素，比如说，选择的第一个指定了值的页面元素，可能并不是你想要查找的元素。这会导致测试失败。
+
+**通过 Class attribute 查找元素**
+
+除了使用 id 和 name attributes，你还可以使用 class attribute 来定位元素。
+
+	WebElement username = driver.findElement(By.className("username"));
+	WebElement password = driver.findElement(By.className("password"));
+
+WebElement 类还支持查找子元素的查找方法。比如：想象一下，有一些重复的页面元素，但是，它们位于分开的 `<div>` 元素中。我们可以先定位其父元素 `<div>` ，然后在该 `<div>` 元素的范围内定位子元素，像下面这样：
+
+	WebElement div = driver.findElement(By.id("div1"));
+	WebElement topLink = div.findElement(By.linkText("Top"));
+
+你也可以这样使用：
+
+	WebElement topLink = driver.findElement(By.id(''div1")).findElement(By.linkText("top"));
+
+
+
+
+
+
 
 *To be continue...*
 
