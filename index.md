@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Notepad
+title: Shon Wang's Notepad
 ---
 {% include JB/setup %}
 ###INDEX
